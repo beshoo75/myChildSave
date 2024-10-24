@@ -1,0 +1,26 @@
+const generateRoomName = (contact) => {
+    let roomName = "";
+    if (
+        localStorage.getItem("is_superuser") == "true" ||
+        (localStorage.getItem("is_staff") == "true" &&
+            contact["is_superuser"] == false)
+        // localStorage.getItem("is_staff") == false
+    ) {
+        console.log("parent");
+        return `${contact.username}_${localStorage.getItem("username")}`;
+    } else {
+        console.log("admin");
+        return `${localStorage.getItem("username")}_${contact.username}`;
+    }
+    // else {
+    //     if (contact["is_superuser"] == false) {
+    //         roomName = `${contact.username}_${localStorage.getItem(
+    //             "username"
+    //         )}`;
+    //     } else {
+    //     }
+    // }
+    // return roomName;
+};
+
+export default generateRoomName;
