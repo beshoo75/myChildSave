@@ -19,40 +19,16 @@ const ListBuses = () => {
     const [showDeleteValidation, setShowDeleteValidation] = useState(false);
     const [busID, setBusID] = useState(null);
     const navigate = useNavigate();
-
-    // const filteredBuses = useMemo(() => {
-    //     return busesData.filter(student => {
-    //         const genderMatches = genderFilter === 0 || student.gender === (genderFilter === 1);
-    //         const gradeMatches = gradeFilter === 0 || student.grade === gradeFilter;
-    //         return genderMatches && gradeMatches;
-    //     });
-    // }, [busesData, genderFilter, gradeFilter]);
-    // const filteredBuses = useMemo(() => {
-    //     return busesData
-    // }, );
-
     const editButtonEventHandler = (id) => {
         navigate("bus-form", {
             state: { id, title: "تعديل بيانات الحافله", isReadOnly: false },
         });
     };
-
-    // const filterChangeHandle = (event) => {
-    //     const { name, value } = event.target;
-    //     if (name === 'gender_filter') {
-    //         setGenderFilter(parseInt(value));
-    //     }
-    //     if (name === 'grade_filter') {
-    //         setGradeFilter(parseInt(value));
-    //     }
-    // };
-
     const addButtonEventHandler = () => {
         navigate("bus-form", {
             state: { id: 0, title: "إضافة حافله جديد", isReadOnly: false },
         });
     };
-
     const viewButtonEventHandler = (id) => {
         navigate("bus-form", {
             state: { id, title: "بيانات الحافله", isReadOnly: true },
