@@ -15,19 +15,7 @@ import LogoutButton from "./widget/logout_button";
 // import { useEffect, useState } from "react";
 
 export default function AdminHomePage() {
-    // const [interval, setInterval] = useState();
-    // useEffect(() => {
-        // const { latitude, longitude } = getLocation();
-        // const interval = setInterval(() => {
-        //     getLocation();
-        // }, 10000);
-        // clearInterval(interval);
-        // console(`interval: ${interval}, type: ${typeof interval}`);
-
-
-
-        // console.log(`latitude:${latitude}, longitude: ${longitude}`);
-    // }, []);
+    
 
     const links = [
         [faUser, "المشرفون", "ListSupervisor"],
