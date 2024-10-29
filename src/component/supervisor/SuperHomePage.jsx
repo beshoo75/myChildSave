@@ -17,14 +17,14 @@ export default function SuperHomePage() {
     const links = [
         [faListCheck, "الحضور", "/attendance-list"],
         [faGear, "الاعدادات", "/SettingsPage"],
-        [faBell, "الاشعارات", "/NotificationPage"],
-        [faMapLocation, "الخريطه", "reports"],
+        // [faBell, "الاشعارات", "/NotificationPage"],
+        [faMapLocation, "التقارير", "reports"],
         [faMessage, "الدردشة", "/chat-contacts"],
         // [faUser, "الملف الشخصي", "/Profile"],
         // [faKey, "تغيير كلمة المرور", "change-password"],
     ];
 
-   
+
     return (
         <>
             <div className=" sm:w-screen sm:h-screen flex justify-evenly items-center flex-col lg:flex-row">
